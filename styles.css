@@ -150,3 +150,126 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+/* Lista de servicios con viñetas */
+.services-list {
+    list-style-type: disc; /* activa viñetas */
+    margin-left: 20px;     /* espacio a la izquierda */
+    padding-left: 0;
+}
+
+.services-list li {
+    font-weight: bold;     
+    margin-bottom: 10px;  
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* Modo oscuro */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #414144; /* fondo oscuro */
+    color: #d9dadc;           /* texto principal */
+  }
+
+header {
+    background-color: #f6c944; /* header/footer oscuro */
+  }
+
+  footer {
+    background-color: #121212; /* header/footer oscuro */
+  }
+
+  a {
+    color: #f6c944;            /* links amarillos como acento */
+  }
+
+  a:hover {
+    background-color: #f6c94420; /* hover suave */
+    color: #d9dadc;
+  }
+
+  .banner {
+    background-color: #f6c944 !important;
+    color: #353535;
+  }
+
+  /* Lista de servicios */
+  .services-list li a {
+    border-left: 4px solid #f6c944; /* indicador visual amarillo */
+    background-color: transparent;
+  }
+
+  .services-list li a:hover {
+    background-color: #f6c94420;
+  }
+
+  .services-list li a {
+    text-decoration: none;
+    color: #d9dadc;
+    font-size: 1.2rem;
+    padding: 12px 16px;
+    display: block;
+    border-left: 4px solid #f6c944; 
+    transition: background 0.2s, padding-left 0.2s;
+}
+
+}
+
+/* Logo centrado en la página principal */
+.main-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.main-logo img {
+    max-width: 100%;
+    height: auto;
+    width: 300px; /* tamaño máximo en pantallas grandes */
+}
+
+@media (max-width: 768px) {
+    .main-logo img {
+        width: 200px; /* tamaño reducido en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-logo img {
+        width: 150px; /* tamaño reducido en pantallas pequeñas */
+    }
+}
+
+
+/* Efecto moderno: pulso sutil del logo */
+.main-logo img {
+    max-width: 100%;
+    height: auto;
+    width: 300px;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05); /* pequeño aumento de tamaño */
+        opacity: 0.95;           /* leve cambio de opacidad */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-logo img {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-logo img {
+        width: 150px;
+    }
+}
