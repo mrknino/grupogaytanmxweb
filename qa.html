@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupo Gaytán</title>
+    <title>Preguntas Frecuentes - Grupo Gaytán</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -19,7 +19,7 @@
             <li><a href="index.html">Inicio</a></li>
             <li class="dropdown">
                 <a href="servicios.html">Servicios ▾</a>
-               <ul class="dropdown-menu">
+                <ul class="dropdown-menu">
                     <li><a href="uniformes.html">Uniformes y Ropa de Trabajo</a></li>
                     <li><a href="insumos.html">Insumos Industriales</a></li>
                     <li><a href="epp.html">Equipo de Protección Personal</a></li>
@@ -28,7 +28,6 @@
                     <li><a href="coffeebreak.html">Coffee Break</a></li>
                     <li><a href="eventos.html">Ambientaciones y Eventos</a></li>
                     <li><a href="viajes.html">Reservación de Viajes</a></li>
-                    <!-- <li><a href="toolcrib.html">Software de Toolcrib</a></li> -->
                 </ul>
             </li>
             <li><a href="acerca.html">Acerca de</a></li>
@@ -37,14 +36,89 @@
         </ul>
     </nav>
 </header>
+
 <main>
-<h1>Preguntas Frecuentes</h1><ul><li>¿Cómo puedo pedir un servicio?</li><li>¿Tienen cobertura nacional?</li></ul>
+    <h1>Preguntas Frecuentes</h1>
+   
+<div class="accordion">
+    <div class="accordion-item">
+        <button class="accordion-button">¿Cómo puedo pedir un servicio?</button>
+        <div class="accordion-content">
+            <p>Puedes solicitarnos un servicio contactándonos vía correo, teléfono o llenando nuestro formulario en línea. Nuestro equipo te responderá rápidamente con la información que necesitas.</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-button">¿Tienen cobertura nacional?</button>
+        <div class="accordion-content">
+            <p>Sí, ofrecemos cobertura en todo México para nuestros servicios de envio o enlina. Para eventos presenciales el servicio seria solo en CD. Juarez.</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-button">¿Cuál es el tiempo de entrega de los servicios?</button>
+        <div class="accordion-content">
+            <p>El tiempo depende del tipo de servicio y la ubicación. Normalmente confirmamos los detalles y tiempos en cuanto recibimos tu solicitud.</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-button">¿Ofrecen paquetes personalizados?</button>
+        <div class="accordion-content">
+            <p>Sí, podemos diseñar paquetes a medida según tus necesidades, presupuesto y tipo de evento. Contáctanos para asesoría personalizada.</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-button">¿Qué métodos de pago aceptan?</button>
+        <div class="accordion-content">
+            <p>Aceptamos pagos por transferencia bancaria, tarjeta de crédito/débito y pago en efectivo para servicios locales.</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-button">¿Puedo modificar mi solicitud después de enviarla?</button>
+        <div class="accordion-content">
+            <p>Sí, puedes contactarnos para realizar cambios en tu solicitud siempre que el servicio aún no haya sido programado o iniciado.</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-button">¿Tienen servicios de última hora o urgentes?</button>
+        <div class="accordion-content">
+            <p>Dependiendo de la disponibilidad, podemos atender solicitudes de último minuto. Es recomendable contactarnos directamente para evaluar cada caso.</p>
+        </div>
+    </div>
+</div>
+
+
 </main>
+
 <footer>
     <p>© 2025 Grupo Gaytán. Todos los derechos reservados.</p>
     <div class="socials">
         <a href="#">Facebook</a> | <a href="#">LinkedIn</a> | <a href="#">Instagram</a>
     </div>
 </footer>
+
+<script>
+    const accordionButtons = document.querySelectorAll('.accordion-button');
+
+    accordionButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const content = button.nextElementSibling;
+
+            // Toggle active class
+            button.classList.toggle('active');
+
+            if(content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    });
+</script>
+
 </body>
 </html>
