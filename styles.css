@@ -172,7 +172,7 @@ footer a:hover {
 /* Modo oscuro */
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #d9dadc; /* fondo oscuro */
+    background-color: #f6c944; /* fondo oscuro */
     color: #121212;           /* texto principal */
   }
 
@@ -190,7 +190,7 @@ header {
 
   a:hover {
     background-color: #f6c94420; /* hover suave */
-    color: #121212;
+    color: #f6c944;
   }
 
   .banner {
