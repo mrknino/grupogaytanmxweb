@@ -14,11 +14,14 @@
     <div class="logo">
         <img src="logo.png" alt="Grupo Gaytán Logo">
     </div>
-    <nav>
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <nav id="nav">
         <ul class="nav-links">
             <li><a href="index.html">Inicio</a></li>
             <li class="dropdown">
-                <a href="servicios.html">Servicios ▾</a>
+                <a href="#">Servicios ▾</a>
                 <ul class="dropdown-menu">
                     <li><a href="uniformes.html">Uniformes y Ropa de Trabajo</a></li>
                     <li><a href="insumos.html">Insumos Industriales</a></li>
@@ -95,13 +98,18 @@
 </main>
 
 <footer>
-    <p>© 2025 Grupo Gaytán. Todos los derechos reservados.</p>
+    <p>© Grupo Gaytán. Todos los derechos reservados.</p>
     <div class="socials">
-        <a href="#">Facebook</a> | <a href="#">LinkedIn</a> | <a href="#">Instagram</a>
+        <a href="https://www.linkedin.com/company/grupo-gaytan/about/">LinkedIn</a> | 
+        <a href="https://www.instagram.com/grupo_gaytan/">Instagram</a>
     </div>
 </footer>
 
 <script>
+     document.getElementById("menu-toggle").addEventListener("click", function() {
+        document.getElementById("nav").classList.toggle("active");
+    });
+
     const accordionButtons = document.querySelectorAll('.accordion-button');
 
     accordionButtons.forEach(button => {

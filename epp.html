@@ -14,12 +14,15 @@
     <div class="logo">
         <img src="logo.png" alt="Grupo Gaytán Logo">
     </div>
-    <nav>
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <nav id="nav">
         <ul class="nav-links">
             <li><a href="index.html">Inicio</a></li>
             <li class="dropdown">
-                <a href="servicios.html">Servicios ▾</a>
-            <ul class="dropdown-menu">
+                <a href="#">Servicios ▾</a>
+                <ul class="dropdown-menu">
                     <li><a href="uniformes.html">Uniformes y Ropa de Trabajo</a></li>
                     <li><a href="insumos.html">Insumos Industriales</a></li>
                     <li><a href="epp.html">Equipo de Protección Personal</a></li>
@@ -28,7 +31,6 @@
                     <li><a href="coffeebreak.html">Coffee Break</a></li>
                     <li><a href="eventos.html">Ambientaciones y Eventos</a></li>
                     <li><a href="viajes.html">Reservación de Viajes</a></li>
-                    <!-- <li><a href="toolcrib.html">Software de Toolcrib</a></li> -->
                 </ul>
             </li>
             <li><a href="acerca.html">Acerca de</a></li>
@@ -41,24 +43,78 @@
 <h1>Equipo de Protección Personal</h1>
 
 <p>
-   <ul class="services-list">
-        <li>Microperforados</li>
-         <li>Chalecos de algodón</li>
-          <li>Chamarra alta visibilidad contra temperaturas extremas</li>
-           <li>Casco de ala completa/Casco de seguridad estandar</li>
-            <li>Arnés de seguridad</li>
-             <li>Lentes de Seguridad</li>
-              <li>Protecciones para manos</li>
-              <li>Calzado</li>
-    </ul>
+<ul class="epp-list">
+    <li><a href="#">Microperforados</a></li>
+    <li><a href="#chalecos">Chalecos de algodón</a></li>
+    <li><a href="#">Chamarra alta visibilidad contra temperaturas extremas</a></li>
+    <li><a href="#">Casco de ala completa/Casco de seguridad estandar</a></li>
+    <li><a href="#">Arnés de seguridad</a></li>
+    <li><a href="#">Lentes de Seguridad</a></li>
+    <li><a href="#proteccion-manos">Protecciones para manos</a></li>
+    <li><a href="#">Calzado</a></li>
+</ul>
+
+
 </p>
+
+<hr class="section-divider">
+<h2 id="chalecos">Chalecos y Ropa Exterior</h2>
+<div class="service-gallery">
+    <img src="img/img_chalecos.jpg" alt="Chaleco">
+    <img src="img/img_chalecoalgodon.jpg" alt="Chaleco de algodón">
+    <img src="img/img_chalecomicro.jpg" alt="Chaleco microperforado">
+    <img src="img/img_chalecopoly.jpg" alt="Chaleco polyester">
+       
+</div>
+<hr class="section-divider">
+<h2 id="proteccion-manos">Protección de Manos y Accesorios</h2>
+<div class="service-gallery">
+  <img src="img/img_guantescortes.jpg" alt="Guantes">
+    <img src="img/img_guantesnitrilo.jpg" alt="Guantes">
+      <img src="img/img_guantesquimicos.jpg" alt="Guantes">
+        <img src="img/img_guantessoldar.jpg" alt="Guantes">
+            <img src="img/img_proteccionmanos.jpg" alt="Guantes">
+                 <img src="img/img_normas.jpg" alt="Guantes">
+</div>
 
 </main>
 <footer>
-    <p>© 2025 Grupo Gaytán. Todos los derechos reservados.</p>
+    <p>© Grupo Gaytán. Todos los derechos reservados.</p>
     <div class="socials">
-        <a href="#">Facebook</a> | <a href="#">LinkedIn</a> | <a href="#">Instagram</a>
+        <a href="https://www.linkedin.com/company/grupo-gaytan/about/">LinkedIn</a> | 
+        <a href="https://www.instagram.com/grupo_gaytan/">Instagram</a>
     </div>
 </footer>
+
+<!-- Botón volver arriba -->
+<button id="back-to-top">↑ Volver arriba</button>
+
+<script>
+    const backToTopButton = document.getElementById("back-to-top");
+
+    // Mostrar el botón al hacer scroll
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    });
+
+    // Scroll suave al hacer click
+    backToTopButton.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
+    // Menú hamburguesa
+    document.getElementById("menu-toggle").addEventListener("click", function() {
+        document.getElementById("nav").classList.toggle("active");
+    });
+</script>
+
+
 </body>
 </html>
