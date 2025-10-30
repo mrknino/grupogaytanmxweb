@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú | El Regio</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <nav id="nav">
+        <ul class="nav-links">
+            <li><a href="comida.html">Inicio</a></li>
+            <li><a href="menu.html" class="active">Menú</a></li>
+            <li><a href="../index.html">Grupo Gaytán</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="menu-page">
+
+    <section class="menu-category">
+        <h2>🥩 Paquetes Parrilleros</h2>
+        <div class="menu-grid">
+
+            <div class="menu-item">
+                <h3>PAQUETE PRIME</h3>
+                <p>
+                    1KG T-BONE PRIME<br>
+                    1KG COSTILLA CARRILLERA<br>
+                    1KG COSTILLA PUERCO MARINADA<br>
+                    CEBOLLITAS SAZONADAS<br>
+                    SALCHICHA PARA ASAR<br>
+                    1 BOLSA CARBÓN MEZQUITE<br>
+                    2 SALSAS CASERAS<br>
+                    TORTILLAS SONORENSES<br>
+                    TORTILLAS DE MAÍZ<br>
+                    SAZONADOR DE LA CASA
+                </p>
+                <p class="serves">Rinde: 8–12 personas</p>
+                <span class="price">$2,000 MXN</span>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="menu-category">
+        <h2>🔥 Extras</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>Guacamole casero</h3>
+                <p>Preparado al momento, con aguacate fresco y toque de limón.</p>
+                <span class="price">$TBA MXN</span>
+            </div>
+            <div class="menu-item">
+                <h3>Frijoles charros</h3>
+                <p>Tradicionales, con chorizo y tocino.</p>
+                <span class="price">$TBA MXN</span>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>Un servicio de © Grupo Gaytán.</p>
+    <div class="socials">
+        <a href="https://www.instagram.com/elregio_jrz/">Instagram</a> | 
+        <a href="https://www.facebook.com/profile.php?id=61579240647850">Facebook</a>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("menu-toggle").addEventListener("click", function() {
+        document.getElementById("nav").classList.toggle("active");
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Regio</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+   
+      <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<header>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <nav id="nav">
+        <ul class="nav-links">
+            <li><a href="comida.html">Inicio</a></li>
+            <li><a href="menu.html">Menu</a></li>
+                     <li><a href="../index.html">Grupo Gaytan</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="home-center">
+    <div class="center-content">
+        <div class="main-logo">
+            <img src="imgRegio/logoregio.png" alt="Logo Grupo Gaytán">
+        </div>
+        <h1>Bienvenido a <span>El Regio</span></h1>
+        <p>Asadores en vivo, sazon exquisito y un servicio que enamora! Servicio de catering para eventos.</p>
+        <a href="menu.html" class="btn-cta">Ver menu</a>
+    </div>
+</main>
+
+<footer>
+    <p>Un servicio de © Grupo Gaytán.</p>
+    <div class="socials">
+        <a href="https://www.instagram.com/elregio_jrz/">Instagram</a> | 
+        <a href="https://www.facebook.com/profile.php?id=61579240647850">Facebook</a>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("menu-toggle").addEventListener("click", function() {
+        document.getElementById("nav").classList.toggle("active");
+    });
+</script>
+
+</body>
+</html>
